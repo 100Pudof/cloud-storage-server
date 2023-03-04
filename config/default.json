@@ -1,0 +1,7 @@
+{
+  "serverPort": 3000,
+  "dbUrl": "mongodb+srv://studyandrverh:Andrylin1993@cluster0.tj5lfuc.mongodb.net/?retryWrites=true&w=majority",
+  "secretKey": "anyone-secret",
+  "filePath": "C:\\Users\\Андрей\\Desktop\\proj\\cloud_storage\\server\\files",
+  "staticPath": "C:\\Users\\Андрей\\Desktop\\proj\\cloud_storage\\server\\static"
+}
