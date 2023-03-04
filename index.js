@@ -20,7 +20,7 @@ app.use("/api/files", fileRouter);
 
 const start = async () => {
     try {
-        await mongoose.connect(config.get("dbUrl"))
+        await mongoose.connect("mongodb+srv://studyandrverh:Andrylin1993@cluster0.tj5lfuc.mongodb.net/?retryWrites=true&w=majority")
         app.listen(PORT, () => {
                 console.log(PORT, "server run")
             }
