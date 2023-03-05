@@ -43,6 +43,7 @@ router.post("/registration",
             );
         } catch (e) {
             console.log(e)
+            res.send({message: `Server error ${e}`})
         }
     });
 
@@ -75,7 +76,7 @@ router.post("/login",
             })
         } catch (e) {
             console.log(e)
-            res.send({message: "Server error"})
+            res.send({message: `Server error ${e}`})
         }
     });
 
@@ -99,7 +100,7 @@ router.get("/auth", authMiddleware,
             })
         } catch (e) {
             console.log(e)
-            res.send({message: "Server error"})
+            res.send({message: `Server error ${e}`})
         }
     });
 
