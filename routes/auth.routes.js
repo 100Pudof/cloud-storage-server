@@ -63,7 +63,7 @@ router.post("/login",
                 return res.status(400).json({message: "Неверный пароль"});
             }
 
-            const token = jwt.sign({id: user.id}, config.get("secretKey"), {expiresIn: "3h"});
+            const token = jwt.sign({id: user.id}, "anyone-secret", {expiresIn: "3h"});
             return res.json({
                 token,
                 user: {
@@ -87,7 +87,7 @@ router.get("/auth", authMiddleware,
                 return  res.status(401).json({})
             }
             const user = await User.findOne({id: req.user.id})
-            const token = jwt.sign({id: user.id}, config.get("secretKey"), {expiresIn: "1h"});
+            const token = jwt.sign({id: user.id}, "anyone-secret", {expiresIn: "1h"});
             return res.json({
                 token,
                 user: {
